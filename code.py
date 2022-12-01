@@ -16,5 +16,8 @@ for col in df.columns:
 # Getting dataframe where person survived
 rslt_df = df.loc[df['Survived'] ==1]
 
+# Getting rows where age is not null
+age_na_df=rslt_df.loc[rslt_df['Age'].notnull()]
+
 # Getting mean of not null fields of processed dataframe
-rslt_df['Age'].notnull().mean()
+age_na_df['Age'].mean()
